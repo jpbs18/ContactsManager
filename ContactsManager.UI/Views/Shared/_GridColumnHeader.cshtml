@@ -1,0 +1,20 @@
+﻿@foreach (var heading in ViewBag.TableHeadings)
+{
+    if (@ViewBag.SortOrder == "DESC")
+    {
+        <th>
+            <a href="~/persons/index?searchBy=@ViewBag.SearchBy&searchString=@ViewBag.SearchString&sortBy=@heading.Key&sortOrder=ASC">
+                @heading.Value
+            </a>
+        </th>
+    }
+    else
+    {
+        <th>
+            <a href="~/persons/index?searchBy=@ViewBag.SearchBy&searchString=@ViewBag.SearchString&sortBy=@heading.Key&sortOrder=DESC">
+                @heading.Value
+            </a>
+        </th>
+    }
+}
+<th>Options</th>

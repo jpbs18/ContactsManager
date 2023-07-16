@@ -1,0 +1,68 @@
+﻿@model IEnumerable<PersonResponse>
+@{
+    ViewBag.Title = "Persons";
+}
+
+<form asp-controller="Persons" asp-action="Index" method="get">
+    <h1>Persons</h1>
+
+    <a asp-controller="Persons" asp-action="Create" class="link-hover">Create Person</a>
+    <a asp-controller="Persons" asp-action="PersonsPDF" class="link-hover">Download as PDF</a>
+    <a asp-controller="Persons" asp-action="PersonsCSV" class="link-hover">Download as CSV</a>
+    <a asp-controller="Persons" asp-action="PersonsExcel" class="link-hover">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                @foreach (var field in ViewBag.SearchFields)
+                {
+                    if(field.Key == ViewBag.SearchBy)
+                    {
+                        <option value="@field.Key" selected>@field.Value</option>
+                    }
+                    else
+                    {
+                         <option value="@field.Key">@field.Value</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString" value="@ViewBag.SearchString"/>
+        </div>
+        @* ex: searchBy=Name&searchString=John*@
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a asp-controller="Persons" asp-action="Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                @await Html.PartialAsync("_GridColumnHeader", null, ViewData)
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td>@person.Email</td>
+                    <td>@person.BirthDate?.ToString("dd-MM-yyyy")</td>
+                    <td>@person.Age</td>
+                    <td>@person.Address</td>
+                    <td>@person.Gender</td>
+                    <td>@person.Country</td>
+                    <td>@person.ReceivedNewsLetter</td>
+                    <td>
+                        <a asp-controller="Persons" asp-action="Edit" asp-route-personId="@person.Id">Edit</a>
+                        <a asp-controller="Persons" asp-action="Delete" asp-route-personId="@person.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

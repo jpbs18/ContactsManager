@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsManager.UI", "ContactsManager.UI\ContactsManager.UI.csproj", "{ED004DF6-A64D-45FB-8A7B-A37FC23EB2F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{94E4F5F6-7269-4EF8-BCC1-A20017A0544B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CCD0CE55-9459-47AF-98CE-1FD53821E020}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsManager.Core", "ContactsManager.Core\ContactsManager.Core.csproj", "{1217FA4A-F021-4025-835F-3A8F3D0862AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsManager.Infrastructure", "ContactsManager.Infrastructure\ContactsManager.Infrastructure.csproj", "{09FE401C-5305-4827-B63A-31D3B94DE3E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsManager.ServiceTests", "ContactsManager.ServiceTests\ContactsManager.ServiceTests.csproj", "{CFD07344-F7FD-447E-9272-E803FBAB42AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsManager.ControllerTests", "ContactsManager.ControllerTests\ContactsManager.ControllerTests.csproj", "{F409928E-D95D-4F03-9392-07B708E59EDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED004DF6-A64D-45FB-8A7B-A37FC23EB2F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED004DF6-A64D-45FB-8A7B-A37FC23EB2F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED004DF6-A64D-45FB-8A7B-A37FC23EB2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED004DF6-A64D-45FB-8A7B-A37FC23EB2F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1217FA4A-F021-4025-835F-3A8F3D0862AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1217FA4A-F021-4025-835F-3A8F3D0862AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1217FA4A-F021-4025-835F-3A8F3D0862AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1217FA4A-F021-4025-835F-3A8F3D0862AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FE401C-5305-4827-B63A-31D3B94DE3E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FE401C-5305-4827-B63A-31D3B94DE3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FE401C-5305-4827-B63A-31D3B94DE3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FE401C-5305-4827-B63A-31D3B94DE3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD07344-F7FD-447E-9272-E803FBAB42AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD07344-F7FD-447E-9272-E803FBAB42AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD07344-F7FD-447E-9272-E803FBAB42AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD07344-F7FD-447E-9272-E803FBAB42AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F409928E-D95D-4F03-9392-07B708E59EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F409928E-D95D-4F03-9392-07B708E59EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F409928E-D95D-4F03-9392-07B708E59EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F409928E-D95D-4F03-9392-07B708E59EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED004DF6-A64D-45FB-8A7B-A37FC23EB2F7} = {94E4F5F6-7269-4EF8-BCC1-A20017A0544B}
+		{1217FA4A-F021-4025-835F-3A8F3D0862AD} = {94E4F5F6-7269-4EF8-BCC1-A20017A0544B}
+		{09FE401C-5305-4827-B63A-31D3B94DE3E3} = {94E4F5F6-7269-4EF8-BCC1-A20017A0544B}
+		{CFD07344-F7FD-447E-9272-E803FBAB42AF} = {CCD0CE55-9459-47AF-98CE-1FD53821E020}
+		{F409928E-D95D-4F03-9392-07B708E59EDA} = {CCD0CE55-9459-47AF-98CE-1FD53821E020}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5874493-6B14-48E5-81C2-52928E9FA1F9}
+	EndGlobalSection
+EndGlobal

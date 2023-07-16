@@ -1,0 +1,52 @@
+[
+  {
+    "Id": "D7271C89-A711-4CE5-B8B1-DA7288010CF6",
+    "Name": "João Santos",
+    "Email": "j.p.santos21@hotmail.com",
+    "BirthDate": "1991-04-16",
+    "Gender": "Male",
+    "CountryId": "EA75F617-0E2E-41D8-AA52-0CAAC5DD9072",
+    "Address": "Maia",
+    "ReceivedNewsLetter": true
+  },
+  {
+    "Id": "FB7A7144-68A8-4B4E-8E7F-6EA77610A48C",
+    "Name": "Cláudia Silva",
+    "Email": "claudia.silva@hotmail.com",
+    "BirthDate": "1991-08-31",
+    "Gender": "Female",
+    "CountryId": "A4E032A1-9FC6-4F22-BE31-73DAF564AD41",
+    "Address": "Castêlo da Maia",
+    "ReceivedNewsLetter": true
+  },
+  {
+    "Id": "5F1E1BE5-26EA-4BDC-88FB-78102955E0AF",
+    "Name": "Joaquim Santos",
+    "Email": "j.santos_1964@hotmail.com",
+    "BirthDate": "1964-02-06",
+    "Gender": "Male",
+    "CountryId": "158F59F7-5AAD-4C8E-8BD0-BA95F4033887",
+    "Address": "Maia",
+    "ReceivedNewsLetter": true
+  },
+  {
+    "Id": "71CB2BB8-DD80-4D7C-9DBA-422489B8FA7E",
+    "Name": "Adélia Santos",
+    "Email": "adelia.santos@hotmail.com",
+    "BirthDate": "1991-04-16",
+    "Gender": "Female",
+    "CountryId": "8A05AAEE-3985-47E2-8034-F05FA0E8D2EA",
+    "Address": "Maia",
+    "ReceivedNewsLetter": false
+  },
+  {
+    "Id": "0D01EE24-E384-42D5-B4EE-A7B7A0D4AA45",
+    "Name": "Jorge Basto",
+    "Email": "jorge.basto@hotmail.com",
+    "BirthDate": "1992-08-08",
+    "Gender": "Male",
+    "CountryId": "EA75F617-0E2E-41D8-AA52-0CAAC5DD9072",
+    "Address": "Águas Santas",
+    "ReceivedNewsLetter": true
+  }
+]
