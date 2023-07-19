@@ -50,7 +50,6 @@ namespace ContactsManager.UI.Controllers
                 return RedirectToAction("Index", "Persons");
             }
 
-
             foreach(var error in result.Errors) 
             {
                 ModelState.AddModelError("Register", error.Description);
