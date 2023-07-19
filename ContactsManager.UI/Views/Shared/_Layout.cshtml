@@ -1,5 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string Highlight(string path) => path == ViewBag.CurrentUrl ? "nav-active" : ""; 
+}
 
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,9 +17,21 @@
             </div>
             <ul>
                 <li>
-                    <a asp-controller="Persons" asp-action="Index">Persons</a>
-                    <a asp-controller="Countries" asp-action="UploadFromExcel">Upload Excel File</a>
-                    <a asp-controller="Account" asp-action="Register">Register</a>
+                    @User.Identity?.Name
+                </li>
+                <li>
+                    <a asp-controller="Persons" asp-action="Index" class=@Highlight("~/Persons/Index")>Persons</a>
+                    <a asp-controller="Countries" asp-action="UploadFromExcel" class=@Highlight("~/Countries/UploadFromExcel")>Upload Excel File</a>
+
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        <a asp-controller="Account" asp-action="Logout" class=@Highlight("~/Account/Logout")>Logout</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Register" class=@Highlight("~/Account/Register")>Register</a>
+                        <a asp-controller="Account" asp-action="Login" class=@Highlight("~/Account/Login")>Login</a>
+                    }
                 </li>
             </ul>
         </div>

@@ -22,6 +22,7 @@ namespace ContactsManager.Core.DTO
 
         [Required(ErrorMessage = "Confirm password please")]
         [DataType(DataType.Password)]
+        [Compare("Password", ErrorMessage = "Password and confirmed password do not match")]
         public string? ConfirmPassword { get; set; }
     }
 }

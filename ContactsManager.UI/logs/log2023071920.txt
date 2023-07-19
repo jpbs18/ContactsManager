@@ -1,0 +1,1729 @@
+2023-07-19 20:26:04.382 +01:00 [INF] User profile is available. Using 'C:\Users\João\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-19 20:26:04.647 +01:00 [INF] Now listening on: http://localhost:5166
+2023-07-19 20:26:05.283 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-19 20:26:07.180 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-19 20:26:08.119 +01:00 [INF] Executed DbCommand (68ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2023-07-19 20:26:08.334 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-19 20:26:08.400 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-19 20:26:08.457 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-19 20:26:08.465 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:08.497 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-19 20:26:08.528 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:08.532 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:08.535 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:08.537 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-19 20:26:08.540 +01:00 [INF] Index action method of PersonsController
+2023-07-19 20:26:08.545 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-19 20:26:08.548 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-19 20:26:08.551 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-19 20:26:08.621 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-19 20:26:08.690 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-19 20:26:08.712 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-19 20:26:08.768 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:08.770 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:08.772 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:08.777 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-19 20:26:08.787 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-19 20:26:09.006 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-19 20:26:09.124 +01:00 [INF] Executed ViewResult - view Index executed in 338.5876ms.
+2023-07-19 20:26:09.131 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-19 20:26:09.136 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 632.2772ms
+2023-07-19 20:26:09.139 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:09.144 +01:00 [INF] ResponseBody: <!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    maria@gmail.com
+                </li>
+                <li>
+                    <a href="/Persons/Index">Persons</a>
+                    <a href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-19 20:26:09.214 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 3935.1520ms
+2023-07-19 20:26:09.256 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-19 20:26:09.259 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-19 20:26:09.267 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 7.9234ms
+2023-07-19 20:26:09.306 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.5334ms
+2023-07-19 20:26:39.180 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-19 20:26:39.187 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-19 20:26:39.189 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:39.190 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-19 20:26:39.194 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:39.200 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:39.202 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:39.203 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-19 20:26:39.204 +01:00 [INF] Index action method of PersonsController
+2023-07-19 20:26:39.205 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-19 20:26:39.206 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-19 20:26:39.207 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-19 20:26:39.248 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-19 20:26:39.256 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-19 20:26:39.261 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-19 20:26:39.262 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-19 20:26:39.263 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:39.264 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:39.265 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:39.267 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-19 20:26:39.268 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-19 20:26:39.271 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-19 20:26:39.282 +01:00 [INF] Executed ViewResult - view Index executed in 13.4153ms.
+2023-07-19 20:26:39.283 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-19 20:26:39.285 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 91.7095ms
+2023-07-19 20:26:39.286 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:39.287 +01:00 [INF] ResponseBody: <!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    maria@gmail.com
+                </li>
+                <li>
+                    <a href="/Persons/Index">Persons</a>
+                    <a href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-19 20:26:39.297 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 116.9141ms
+2023-07-19 20:26:39.320 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-19 20:26:39.322 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-19 20:26:39.325 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 3.0075ms
+2023-07-19 20:26:39.342 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.2698ms
+2023-07-19 20:26:40.267 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-19 20:26:40.283 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-19 20:26:40.286 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:40.287 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-19 20:26:40.292 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.293 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.294 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.295 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-19 20:26:40.297 +01:00 [INF] Index action method of PersonsController
+2023-07-19 20:26:40.298 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-19 20:26:40.299 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-19 20:26:40.301 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-19 20:26:40.309 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-19 20:26:40.317 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-19 20:26:40.323 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-19 20:26:40.324 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-19 20:26:40.326 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.327 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.329 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.331 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-19 20:26:40.332 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-19 20:26:40.336 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-19 20:26:40.340 +01:00 [INF] Executed ViewResult - view Index executed in 8.3306ms.
+2023-07-19 20:26:40.341 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-19 20:26:40.343 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 53.1924ms
+2023-07-19 20:26:40.344 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:40.345 +01:00 [INF] ResponseBody: <!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    maria@gmail.com
+                </li>
+                <li>
+                    <a href="/Persons/Index">Persons</a>
+                    <a href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-19 20:26:40.355 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 87.5506ms
+2023-07-19 20:26:40.371 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-19 20:26:40.384 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-19 20:26:40.388 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.6919ms
+2023-07-19 20:26:40.388 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 3.6558ms
+2023-07-19 20:26:40.771 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-19 20:26:40.774 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-19 20:26:40.776 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:40.777 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-19 20:26:40.779 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.781 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.785 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.786 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-19 20:26:40.788 +01:00 [INF] Index action method of PersonsController
+2023-07-19 20:26:40.789 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-19 20:26:40.789 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-19 20:26:40.790 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-19 20:26:40.792 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-19 20:26:40.797 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-19 20:26:40.801 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-19 20:26:40.802 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-19 20:26:40.804 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.805 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.806 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:40.807 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-19 20:26:40.809 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-19 20:26:40.811 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-19 20:26:40.815 +01:00 [INF] Executed ViewResult - view Index executed in 6.6905ms.
+2023-07-19 20:26:40.817 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-19 20:26:40.819 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 39.6482ms
+2023-07-19 20:26:40.820 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:40.821 +01:00 [INF] ResponseBody: <!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    maria@gmail.com
+                </li>
+                <li>
+                    <a href="/Persons/Index">Persons</a>
+                    <a href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-19 20:26:40.835 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 63.7704ms
+2023-07-19 20:26:40.853 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-19 20:26:40.854 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-19 20:26:40.855 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 2.2884ms
+2023-07-19 20:26:40.873 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.2697ms
+2023-07-19 20:26:41.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-19 20:26:41.275 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-19 20:26:41.276 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:41.278 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-19 20:26:41.280 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.284 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.287 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.288 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-19 20:26:41.290 +01:00 [INF] Index action method of PersonsController
+2023-07-19 20:26:41.291 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-19 20:26:41.291 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-19 20:26:41.292 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-19 20:26:41.294 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-19 20:26:41.297 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-19 20:26:41.303 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-19 20:26:41.304 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-19 20:26:41.305 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.306 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.307 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.309 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-19 20:26:41.310 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-19 20:26:41.312 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-19 20:26:41.319 +01:00 [INF] Executed ViewResult - view Index executed in 8.7869ms.
+2023-07-19 20:26:41.320 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-19 20:26:41.321 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 41.1119ms
+2023-07-19 20:26:41.323 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:41.324 +01:00 [INF] ResponseBody: <!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    maria@gmail.com
+                </li>
+                <li>
+                    <a href="/Persons/Index">Persons</a>
+                    <a href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-19 20:26:41.334 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 62.3182ms
+2023-07-19 20:26:41.347 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-19 20:26:41.347 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-19 20:26:41.350 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 3.3128ms
+2023-07-19 20:26:41.386 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.9794ms
+2023-07-19 20:26:41.789 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-19 20:26:41.793 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-19 20:26:41.795 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:41.797 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-19 20:26:41.802 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.803 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.804 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.805 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-19 20:26:41.807 +01:00 [INF] Index action method of PersonsController
+2023-07-19 20:26:41.808 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-19 20:26:41.809 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-19 20:26:41.810 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-19 20:26:41.811 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-19 20:26:41.815 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-19 20:26:41.821 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-19 20:26:41.821 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-19 20:26:41.823 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.824 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.826 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:41.827 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-19 20:26:41.828 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-19 20:26:41.830 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-19 20:26:41.836 +01:00 [INF] Executed ViewResult - view Index executed in 8.1267ms.
+2023-07-19 20:26:41.838 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-19 20:26:41.839 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 37.5002ms
+2023-07-19 20:26:41.840 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:41.842 +01:00 [INF] ResponseBody: <!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    maria@gmail.com
+                </li>
+                <li>
+                    <a href="/Persons/Index">Persons</a>
+                    <a href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-19 20:26:41.852 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 62.6995ms
+2023-07-19 20:26:41.867 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-19 20:26:41.868 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-19 20:26:41.871 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 2.2178ms
+2023-07-19 20:26:41.900 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.6288ms
+2023-07-19 20:26:42.370 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-19 20:26:42.373 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-19 20:26:42.377 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:42.378 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-19 20:26:42.380 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:42.382 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:42.384 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:42.385 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-19 20:26:42.388 +01:00 [INF] Index action method of PersonsController
+2023-07-19 20:26:42.390 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-19 20:26:42.392 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-19 20:26:42.393 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-19 20:26:42.394 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-19 20:26:42.398 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-19 20:26:42.405 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-19 20:26:42.406 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-19 20:26:42.407 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:42.408 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:42.409 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-19 20:26:42.410 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-19 20:26:42.412 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-19 20:26:42.414 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-19 20:26:42.420 +01:00 [INF] Executed ViewResult - view Index executed in 8.03ms.
+2023-07-19 20:26:42.421 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-19 20:26:42.424 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 43.2888ms
+2023-07-19 20:26:42.426 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-19 20:26:42.427 +01:00 [INF] ResponseBody: <!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    maria@gmail.com
+                </li>
+                <li>
+                    <a href="/Persons/Index">Persons</a>
+                    <a href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a href="">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-19 20:26:42.438 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 68.3341ms
+2023-07-19 20:26:42.450 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-19 20:26:42.451 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-19 20:26:42.454 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 2.3233ms
+2023-07-19 20:26:42.488 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 37.8109ms
