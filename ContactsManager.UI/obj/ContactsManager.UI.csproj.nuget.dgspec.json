@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\ContactsManager.UI.csproj": {}
+    "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\ContactsManager.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj": {
+    "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj",
+        "projectUniqueName": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj",
         "projectName": "ContactsManager.Core",
-        "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj",
+        "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj",
         "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\obj\\",
+        "outputPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,14 +98,14 @@
         }
       }
     },
-    "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj": {
+    "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj",
         "projectName": "ContactsManager.Infrastructure",
-        "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -127,8 +127,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj": {
-                "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj"
+              "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj": {
+                "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj"
               }
             }
           }
@@ -176,14 +176,14 @@
         }
       }
     },
-    "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\ContactsManager.UI.csproj": {
+    "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\ContactsManager.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\ContactsManager.UI.csproj",
+        "projectUniqueName": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\ContactsManager.UI.csproj",
         "projectName": "ContactsManager.UI",
-        "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\ContactsManager.UI.csproj",
+        "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\ContactsManager.UI.csproj",
         "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\obj\\",
+        "outputPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -205,11 +205,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj": {
-                "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj"
+              "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj": {
+                "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj"
               },
-              "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj"
+              "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Infrastructure\\ContactsManager.Infrastructure.csproj"
               }
             }
           }

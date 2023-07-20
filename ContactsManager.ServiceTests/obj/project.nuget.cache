@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FAyXek5OrC3gTk93vW5MtPuSxgCyWgU7t2ObJ03cnEFJnGu7eBn8a0WydwNpqdd+Y1LLTgI7Hu0dzjEJeufwvA==",
+  "dgSpecHash": "pSD5yzpCYCKnME/aBBdNO5S24vLGkx6xflmZZAAPjyOOR4LVA/3sYXX0p75mQZ8We41xCIQd+GA96hbuo221Ew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.ServiceTests\\ContactsManager.ServiceTests.csproj",
+  "projectFilePath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.ServiceTests\\ContactsManager.ServiceTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\João\\.nuget\\packages\\autofixture\\4.17.0\\autofixture.4.17.0.nupkg.sha512",
     "C:\\Users\\João\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",

@@ -1,0 +1,6 @@
+2023-07-20 20:33:26.779 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-20 20:33:26.790 +01:00 [INF] Hosting environment: Development
+2023-07-20 20:33:26.804 +01:00 [INF] Content root path: C:\Users\João\aspnetcore\ContactsManager\ContactsManager.UI\
+2023-07-20 20:49:23.512 +01:00 [INF] User profile is available. Using 'C:\Users\João\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-20 20:49:23.723 +01:00 [INF] Now listening on: http://localhost:5166
+2023-07-20 20:49:24.941 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -

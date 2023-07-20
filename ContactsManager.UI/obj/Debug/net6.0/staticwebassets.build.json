@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MnI9CLsjSSazc1tbhLPYNeULOzendeuxB3IRAW2nQq4=",
+  "Hash": "yz2JUpCm0hgboeY+jguNDKLW9S1UgB58aCcQwpNk2L0=",
   "Source": "ContactsManager.UI",
   "BasePath": "_content/ContactsManager.UI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ContactsManager.UI\\wwwroot",
       "Source": "ContactsManager.UI",
-      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\",
       "BasePath": "_content/ContactsManager.UI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\jquery.min.js",
+      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\jquery.min.js",
       "SourceId": "ContactsManager.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\",
       "BasePath": "_content/ContactsManager.UI",
       "RelativePath": "jquery.min.js",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\jquery.validate.min.js",
       "SourceId": "ContactsManager.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\",
       "BasePath": "_content/ContactsManager.UI",
       "RelativePath": "jquery.validate.min.js",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ContactsManager.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\",
       "BasePath": "_content/ContactsManager.UI",
       "RelativePath": "jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\logo.png",
+      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\logo.png",
       "SourceId": "ContactsManager.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\",
       "BasePath": "_content/ContactsManager.UI",
       "RelativePath": "logo.png",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
       "SourceId": "ContactsManager.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\",
       "BasePath": "_content/ContactsManager.UI",
       "RelativePath": "Rotativa/wkhtmltopdf.exe",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
     },
     {
-      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\StyleSheet.css",
+      "Identity": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\StyleSheet.css",
       "SourceId": "ContactsManager.UI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.UI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.UI\\wwwroot\\",
       "BasePath": "_content/ContactsManager.UI",
       "RelativePath": "StyleSheet.css",
       "AssetKind": "All",

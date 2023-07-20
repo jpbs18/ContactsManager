@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O04eaTEDaWDiuSQiW4r3B6fiUPv61XnZS24dW+BXlAA49Qqfpt8vA+aQhXWXRKswd61svy4vDpYHlfDUTE2O9Q==",
+  "dgSpecHash": "4YOt122VWgve4DmtJOgjMw87Dx+2PnScV/lQQ+ckK+pDPLUY9+SnrTQWyBFzWrb8+tPlJhzw+cULsGqvhL53Tw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João\\aspnetcore\\ContactsManagerSolution\\ContactsManager.Core\\ContactsManager.Core.csproj",
+  "projectFilePath": "C:\\Users\\João\\aspnetcore\\ContactsManager\\ContactsManager.Core\\ContactsManager.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\João\\.nuget\\packages\\csvhelper\\28.0.1\\csvhelper.28.0.1.nupkg.sha512",
     "C:\\Users\\João\\.nuget\\packages\\epplus\\6.0.8\\epplus.6.0.8.nupkg.sha512",

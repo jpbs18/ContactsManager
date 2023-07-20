@@ -1,10 +1,12 @@
 ﻿using ContactsManager.Core.Domain.IdentityEntities;
 using ContactsManager.Core.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContactsManager.UI.Controllers
 {
+    [AllowAnonymous]
     [Route("[controller]/[action]")]
     public class AccountController : Controller
     {
@@ -19,11 +21,8 @@ namespace ContactsManager.UI.Controllers
 
 
         [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-
+        public IActionResult Register() => View();
+        
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
@@ -56,6 +55,39 @@ namespace ContactsManager.UI.Controllers
             }
 
             return View(registerDTO);
+        }
+
+        [HttpGet]
+        public IActionResult Login() => View();
+
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginDTO loginDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Errors = ModelState.Values.SelectMany(el => el.Errors).Select(err => err.ErrorMessage);
+                return View(loginDTO);
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(loginDTO.Email, loginDTO.Password, isPersistent: false, lockoutOnFailure: false);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Persons");
+            }
+
+            ModelState.AddModelError("Login", "Invalid credencials");
+
+            return View(loginDTO);
+        }
+
+        
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+
+            return RedirectToAction("Index", "Persons");
         }
 
     }

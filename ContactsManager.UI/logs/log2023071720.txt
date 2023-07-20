@@ -1,2 +1,0 @@
-2023-07-17 20:57:27.669 +01:00 [INF] User profile is available. Using 'C:\Users\João\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-2023-07-17 20:57:28.226 +01:00 [INF] Now listening on: http://localhost:5166

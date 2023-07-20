@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ContactsManager.Core\ContactsManager.Core.csproj" />
-    <ProjectReference Include="..\ContactsManager.Infrastructure\ContactsManager.Infrastructure.csproj" />
+    <Compile Remove="NovaPasta\**" />
+    <Content Remove="NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
+    <None Remove="NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NovaPasta\" />
+    <ProjectReference Include="..\ContactsManager.Core\ContactsManager.Core.csproj" />
+    <ProjectReference Include="..\ContactsManager.Infrastructure\ContactsManager.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
