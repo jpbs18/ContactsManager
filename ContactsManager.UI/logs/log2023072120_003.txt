@@ -1,0 +1,619 @@
+2023-07-21 20:41:35.717 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-21 20:41:35.750 +01:00 [INF] Hosting environment: Development
+2023-07-21 20:41:35.776 +01:00 [INF] Content root path: C:\Users\João\aspnetcore\ContactsManager\ContactsManager.UI\
+2023-07-21 20:58:04.022 +01:00 [INF] User profile is available. Using 'C:\Users\João\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-21 20:58:04.265 +01:00 [INF] Now listening on: http://localhost:5166
+2023-07-21 20:58:05.449 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-21 20:58:06.173 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:58:06.178 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-21 20:58:06.239 +01:00 [INF] Route matched with {action = "Index", controller = "Persons"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String, System.String, ServiceContracts.Enums.SortOrderOptions) on controller CrudExample.Controllers.PersonsController (ContactsManager.UI).
+2023-07-21 20:58:06.274 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:06.276 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:06.277 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:06.279 +01:00 [INF] PersonsListActionFilter.OnActionExecuting method
+2023-07-21 20:58:06.283 +01:00 [INF] Index action method of PersonsController
+2023-07-21 20:58:06.291 +01:00 [INF] GetFilteredPersons of PersonsService
+2023-07-21 20:58:06.295 +01:00 [INF] GetAllPersons of PersonsService
+2023-07-21 20:58:06.298 +01:00 [INF] GetAllPersons of PersonsRepository
+2023-07-21 20:58:08.216 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-21 20:58:09.060 +01:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Address], [p].[BirthDate], [p].[CountryId], [p].[Email], [p].[Gender], [p].[Name], [p].[ReceivedNewsLetter], [c].[Id], [c].[Name]
+FROM [Persons] AS [p]
+LEFT JOIN [Countries] AS [c] ON [p].[CountryId] = [c].[Id]
+2023-07-21 20:58:09.238 +01:00 [INF] GetSortedPersons of PersonsService
+2023-07-21 20:58:09.262 +01:00 [INF] PersonsListActionFilter.OnActionExecuted method
+2023-07-21 20:58:09.322 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:09.324 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:09.325 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:09.331 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - before action result
+2023-07-21 20:58:09.348 +01:00 [INF] Executing ViewResult, running view Index.
+2023-07-21 20:58:09.533 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-21 20:58:09.670 +01:00 [INF] Executed ViewResult - view Index executed in 328.1604ms.
+2023-07-21 20:58:09.677 +01:00 [INF] PersonsListResultFilter.OnResultExecutionAsync - after action result
+2023-07-21 20:58:09.683 +01:00 [INF] Executed action CrudExample.Controllers.PersonsController.Index (ContactsManager.UI) in 3439.8924ms
+2023-07-21 20:58:09.686 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.PersonsController.Index (ContactsManager.UI)'
+2023-07-21 20:58:09.694 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Persons</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    conor@gmail.com
+                </li>
+                <li>
+                    <a class="nav-active" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<form method="get" action="/Persons/Index">
+    <h1>Persons</h1>
+
+    <a class="link-hover" href="/Persons/Create">Create Person</a>
+    <a class="link-hover" href="/Persons/PersonsPDF">Download as PDF</a>
+    <a class="link-hover" href="/Persons/PersonsCSV">Download as CSV</a>
+    <a class="link-hover" href="/Persons/PersonsExcel">Download as Excel</a>
+
+    <div class="box flex">
+        <div class="flex-1">
+            <select class="form-input" name="searchBy">
+                         <option value="Name">Name</option>
+                         <option value="Email">Email</option>
+                         <option value="BirthDate">Date of Birth</option>
+                         <option value="Address">Address</option>
+                         <option value="Gender">Gender</option>
+                         <option value="Country">Country</option>
+            </select>
+        </div>
+
+        <div class="flex-1">
+            <input type="search" id="Search" class="form-input" placeholder="Search" name="searchString"/>
+        </div>
+
+        <div class="flex-1">
+            <button class="button button-blue-back">Search</button>
+            <button class="button"><a href="/Persons/Index">Clear</a></button>
+        </div>
+    </div>
+
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Name&sortOrder=DESC">
+                Name
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Email&sortOrder=DESC">
+                Email
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=BirthDate&sortOrder=DESC">
+                Date of Birth
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Age&sortOrder=DESC">
+                Age
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Address&sortOrder=DESC">
+                Address
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Gender&sortOrder=DESC">
+                Gender
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=Country&sortOrder=DESC">
+                Country
+            </a>
+        </th>
+        <th>
+            <a href="/persons/index?searchBy=&searchString=&sortBy=ReceivedNewsLetter&sortOrder=DESC">
+                Received News Letter
+            </a>
+        </th>
+<th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>Ad&#xE9;lia Santos</td>
+                    <td>adelia.santos@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                    <td>False</td>
+                    <td>
+                        <a href="/Persons/Edit/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Edit</a>
+                        <a href="/Persons/Delete/71cb2bb8-dd80-4d7c-9dba-422489b8fa7e">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cl&#xE1;udia Silva</td>
+                    <td>claudia.silva@hotmail.com</td>
+                    <td>31-08-1991</td>
+                    <td>31</td>
+                    <td>Cast&#xEA;lo da Maia</td>
+                    <td>Female</td>
+                    <td>USA</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Edit</a>
+                        <a href="/Persons/Delete/fb7a7144-68a8-4b4e-8e7f-6ea77610a48c">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Joaquim Santos</td>
+                    <td>j.santos_1964@hotmail.com</td>
+                    <td>06-02-1964</td>
+                    <td>59</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Italy</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Edit</a>
+                        <a href="/Persons/Delete/5f1e1be5-26ea-4bdc-88fb-78102955e0af">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Basto</td>
+                    <td>jorge.basto@hotmail.com</td>
+                    <td>08-08-1992</td>
+                    <td>30</td>
+                    <td>&#xC1;guas Santas</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Edit</a>
+                        <a href="/Persons/Delete/0d01ee24-e384-42d5-b4ee-a7b7a0d4aa45">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jo&#xE3;o Santos</td>
+                    <td>j.p.santos21@hotmail.com</td>
+                    <td>16-04-1991</td>
+                    <td>32</td>
+                    <td>Maia</td>
+                    <td>Male</td>
+                    <td>Portugal</td>
+                    <td>True</td>
+                    <td>
+                        <a href="/Persons/Edit/d7271c89-a711-4ce5-b8b1-da7288010cf6">Edit</a>
+                        <a href="/Persons/Delete/d7271c89-a711-4ce5-b8b1-da7288010cf6">Delete</a>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</form>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-21 20:58:09.776 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 200 - text/html;+charset=utf-8 4330.9553ms
+2023-07-21 20:58:09.830 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-21 20:58:09.830 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-21 20:58:09.839 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 8.9748ms
+2023-07-21 20:58:09.937 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 107.4991ms
+2023-07-21 20:58:12.594 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Logout - -
+2023-07-21 20:58:12.604 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Logout
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:58:12.607 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Logout (ContactsManager.UI)'
+2023-07-21 20:58:12.612 +01:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:58:12.616 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:12.626 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2023-07-21 20:58:12.629 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-07-21 20:58:12.631 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2023-07-21 20:58:12.632 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:12.633 +01:00 [INF] Executing RedirectResult, redirecting to /Persons/Index.
+2023-07-21 20:58:12.636 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Logout (ContactsManager.UI) in 20.2734ms
+2023-07-21 20:58:12.639 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Logout (ContactsManager.UI)'
+2023-07-21 20:58:12.640 +01:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /Persons/Index
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:58:12.642 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Logout - - - 302 0 - 47.7269ms
+2023-07-21 20:58:12.645 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Persons/Index - -
+2023-07-21 20:58:12.650 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-21 20:58:12.656 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-07-21 20:58:12.659 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Persons/Index - - - 302 0 - 13.2608ms
+2023-07-21 20:58:12.661 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2FPersons%2FIndex - -
+2023-07-21 20:58:12.664 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-07-21 20:58:12.667 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:58:12.670 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:58:12.674 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:12.676 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:12.678 +01:00 [INF] Executing ViewResult, running view Login.
+2023-07-21 20:58:12.826 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:58:12.834 +01:00 [INF] Executed ViewResult - view Login executed in 156.7005ms.
+2023-07-21 20:58:12.837 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 163.8576ms
+2023-07-21 20:58:12.838 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:58:12.840 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Register">Register</a>
+                        <a class="nav-active" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Not registered yet? <a method="get" class="link-hover" href="/Account/Register">Register</a>
+    <h2 class="text-large">Login</h2>
+
+    <form method="post" action="/Account/Login?ReturnUrl=%2FPersons%2FIndex">   
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper format" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Login</button>
+
+                <div class="text-red validation-summary-valid" data-valmsg-summary="true">
+                <ul><li style="display:none"></li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PlA_0EnSm6zaQd9D2oFcGkvZWiB-3GHcDFAUAAOyIsb5d-rDLQX0bzjuRFoZjxcDDMIgLtT4kiN1QLoU2NzoHjCfAmATodR5uzsLsZ8TdxnQL8W2O7um2280ie2K75a-WI" /></form>
+</div>
+
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:58:12.848 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2FPersons%2FIndex - - - 200 - text/html;+charset=utf-8 186.9225ms
+2023-07-21 20:58:12.884 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-21 20:58:12.885 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-21 20:58:12.887 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 3.2671ms
+2023-07-21 20:58:12.910 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.9170ms
+2023-07-21 20:58:14.472 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Register - -
+2023-07-21 20:58:14.477 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Register
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:58:14.480 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-07-21 20:58:14.482 +01:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:58:14.495 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:14.497 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:14.499 +01:00 [INF] Executing ViewResult, running view Register.
+2023-07-21 20:58:14.528 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:58:14.537 +01:00 [INF] Executed ViewResult - view Register executed in 38.4768ms.
+2023-07-21 20:58:14.539 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI) in 52.7371ms
+2023-07-21 20:58:14.540 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Register (ContactsManager.UI)'
+2023-07-21 20:58:14.542 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="nav-active" href="/Account/Register">Register</a>
+                        <a class="" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Already Registered ? <a method="get" class="link-hover" href="/Account/Login">Login</a>
+    <h2 class="text-large">Register</h2>
+
+    <form method="post" action="/Account/Register">
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="PersonName">Name</label>
+                <div class="flex-1">
+                    <input class="form-input" type="text" data-val="true" data-val-required="Name can&#x27;t be blank" id="PersonName" name="PersonName" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="PersonName" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper email address format" data-val-remote="That email already exists" data-val-remote-additionalfields="*.Email" data-val-remote-url="/Account/IsEmailAlreadyRegistered" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="ConfirmPassword">Confirm Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-equalto="Password and confirmed password do not match" data-val-equalto-other="*.Password" data-val-required="Confirm password please" id="ConfirmPassword" name="ConfirmPassword" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Phone">Phone</label>
+                <div class="flex-1">
+                    <input class="form-input" type="tel" data-val="true" data-val-regex="Phone number should contain only numbers" data-val-regex-pattern="^[0-9]*$" data-val-required="Phone can&#x27;t be blank" id="Phone" name="Phone" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Register</button>
+
+                <div class="text-red validation-summary-valid" data-valmsg-summary="true">
+                <ul><li style="display:none"></li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PkgAJnb63kcJdjSqbaL7pWIEPw1gz9xucrVfERUWroa9FMBszLsF1Jm3Oc5roeklUrjw2AZNbC09T8VJPYV8Dqn845mvJtbyA_m1o6zXPSJCCPPXKoImk2X0E4QX3vEJTA" /></form>
+</div>
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:58:14.553 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Register - - - 200 - text/html;+charset=utf-8 80.7572ms
+2023-07-21 20:58:14.569 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-21 20:58:14.570 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-21 20:58:14.573 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 3.6274ms
+2023-07-21 20:58:14.581 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.5144ms
+2023-07-21 20:58:31.423 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/IsEmailAlreadyRegistered?Email=conor%40gmail.com - -
+2023-07-21 20:58:31.426 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/IsEmailAlreadyRegistered
+Accept: application/json, text/javascript, */*; q=0.01
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+X-Requested-With: XMLHttpRequest
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:58:31.429 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.IsEmailAlreadyRegistered (ContactsManager.UI)'
+2023-07-21 20:58:31.435 +01:00 [INF] Route matched with {action = "IsEmailAlreadyRegistered", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IsEmailAlreadyRegistered(System.String) on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:58:31.461 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:37.915 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-21 20:58:38.068 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-21 20:58:44.539 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:58:45.219 +01:00 [INF] Executing JsonResult, writing value of type 'System.Boolean'.
+2023-07-21 20:58:45.224 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+X-Custom-Key: [Redacted]
+2023-07-21 20:58:45.226 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.IsEmailAlreadyRegistered (ContactsManager.UI) in 13769.2181ms
+2023-07-21 20:58:45.228 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.IsEmailAlreadyRegistered (ContactsManager.UI)'
+2023-07-21 20:58:45.229 +01:00 [INF] ResponseBody: false
+2023-07-21 20:58:45.231 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/IsEmailAlreadyRegistered?Email=conor%40gmail.com - - - 200 - application/json;+charset=utf-8 13812.8544ms

@@ -1,0 +1,969 @@
+2023-07-21 20:34:04.664 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-21 20:34:04.721 +01:00 [INF] Hosting environment: Development
+2023-07-21 20:34:04.727 +01:00 [INF] Content root path: C:\Users\João\aspnetcore\ContactsManager\ContactsManager.UI\
+2023-07-21 20:41:35.410 +01:00 [INF] User profile is available. Using 'C:\Users\João\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-21 20:41:35.698 +01:00 [INF] Now listening on: http://localhost:5166
+2023-07-21 20:41:36.394 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/ - -
+2023-07-21 20:41:36.834 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-21 20:41:36.884 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-07-21 20:41:36.902 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/ - - - 302 0 - 517.9933ms
+2023-07-21 20:41:36.964 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2F - -
+2023-07-21 20:41:37.000 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-07-21 20:41:37.013 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:37.065 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:41:37.419 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:37.426 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:37.441 +01:00 [INF] Executing ViewResult, running view Login.
+2023-07-21 20:41:37.744 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:41:37.885 +01:00 [INF] Executed ViewResult - view Login executed in 445.5535ms.
+2023-07-21 20:41:37.910 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 840.0309ms
+2023-07-21 20:41:37.914 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:37.923 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Register">Register</a>
+                        <a class="nav-active" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Not registered yet? <a method="get" class="link-hover" href="/Account/Register">Register</a>
+    <h2 class="text-large">Login</h2>
+
+    <form method="post" action="/Account/Login?ReturnUrl=%2F">   
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper format" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Login</button>
+
+                <div class="text-red validation-summary-valid" data-valmsg-summary="true">
+                <ul><li style="display:none"></li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PnS9uiL5Pi1P3m7Y7MVYk5A4MSDh4QLtMsa54Q6LD0_xJc0hbWtI2ZwpQZgPBqOkU6_KK1ZrshR5-D_SNkM7n5rokVV0ApTqQEbj1sAISXDkvhf128R2rEtQzkIfJC4hVY" /></form>
+</div>
+
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:41:37.966 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2F - - - 200 - text/html;+charset=utf-8 1002.0360ms
+2023-07-21 20:41:38.066 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-21 20:41:38.067 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-21 20:41:38.081 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 14.3422ms
+2023-07-21 20:41:38.259 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 191.5848ms
+2023-07-21 20:41:38.301 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/favicon.ico - -
+2023-07-21 20:41:38.327 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-21 20:41:38.331 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-07-21 20:41:38.333 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/favicon.ico - - - 302 0 - 31.1961ms
+2023-07-21 20:41:38.336 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2Ffavicon.ico - -
+2023-07-21 20:41:38.342 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:41:38.345 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:38.347 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:41:38.363 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:38.365 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:38.366 +01:00 [INF] Executing ViewResult, running view Login.
+2023-07-21 20:41:38.372 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:41:38.375 +01:00 [INF] Executed ViewResult - view Login executed in 8.895ms.
+2023-07-21 20:41:38.378 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 27.8486ms
+2023-07-21 20:41:38.379 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:38.380 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Register">Register</a>
+                        <a class="nav-active" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Not registered yet? <a method="get" class="link-hover" href="/Account/Register">Register</a>
+    <h2 class="text-large">Login</h2>
+
+    <form method="post" action="/Account/Login?ReturnUrl=%2Ffavicon.ico">   
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper format" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Login</button>
+
+                <div class="text-red validation-summary-valid" data-valmsg-summary="true">
+                <ul><li style="display:none"></li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PnXEHRG8Bo6Wov6F7V_RfnWgMU6DfAMzYSob7gBxHXlrXWX00gSjUErUiwP6NOjrfpqfRO1mDh6k4wOF6VhdzIHCvbntxDW6KQ6qaIGdqhnsGnfNRVY-LhcXvAiihdA2hM" /></form>
+</div>
+
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:41:38.390 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2Ffavicon.ico - - - 200 - text/html;+charset=utf-8 50.1681ms
+2023-07-21 20:41:47.408 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Countries/UploadFromExcel - -
+2023-07-21 20:41:47.412 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-21 20:41:47.414 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-07-21 20:41:47.417 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Countries/UploadFromExcel - - - 302 0 - 8.6920ms
+2023-07-21 20:41:47.420 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel - -
+2023-07-21 20:41:47.422 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-07-21 20:41:47.424 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:47.426 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:41:47.438 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:47.440 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:47.442 +01:00 [INF] Executing ViewResult, running view Login.
+2023-07-21 20:41:47.444 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:41:47.452 +01:00 [INF] Executed ViewResult - view Login executed in 10.2363ms.
+2023-07-21 20:41:47.454 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 26.1371ms
+2023-07-21 20:41:47.456 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:47.457 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Register">Register</a>
+                        <a class="nav-active" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Not registered yet? <a method="get" class="link-hover" href="/Account/Register">Register</a>
+    <h2 class="text-large">Login</h2>
+
+    <form method="post" action="/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel">   
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper format" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Login</button>
+
+                <div class="text-red validation-summary-valid" data-valmsg-summary="true">
+                <ul><li style="display:none"></li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0Pllpesq7sbwXRXzlGzX-HAVNv_VywiacT62rAmdDTMZkFjLJ3WZ1Wod9HRIL7f0_yoRmM21e-Udl4jKAoGkYwzHLqYJxtb5W_yQ_hu6dfPL4uu2kchTjARCbtPkGhyVeVg" /></form>
+</div>
+
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:41:47.465 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel - - - 200 - text/html;+charset=utf-8 44.4761ms
+2023-07-21 20:41:47.481 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-21 20:41:47.481 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-21 20:41:47.483 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 1.5976ms
+2023-07-21 20:41:47.499 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.6250ms
+2023-07-21 20:41:47.544 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/favicon.ico - -
+2023-07-21 20:41:47.546 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-21 20:41:47.547 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-07-21 20:41:47.548 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/favicon.ico - - - 302 0 - 3.9844ms
+2023-07-21 20:41:47.571 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2Ffavicon.ico - -
+2023-07-21 20:41:47.572 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:41:47.574 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:47.576 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:41:47.579 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:47.581 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:47.582 +01:00 [INF] Executing ViewResult, running view Login.
+2023-07-21 20:41:47.584 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:41:47.588 +01:00 [INF] Executed ViewResult - view Login executed in 6.5458ms.
+2023-07-21 20:41:47.591 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 11.8192ms
+2023-07-21 20:41:47.593 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:47.594 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Register">Register</a>
+                        <a class="nav-active" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Not registered yet? <a method="get" class="link-hover" href="/Account/Register">Register</a>
+    <h2 class="text-large">Login</h2>
+
+    <form method="post" action="/Account/Login?ReturnUrl=%2Ffavicon.ico">   
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper format" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Login</button>
+
+                <div class="text-red validation-summary-valid" data-valmsg-summary="true">
+                <ul><li style="display:none"></li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PkPyZka4bhosP_8kDbW3aZJFuT3C9vArt5pYOdrtOvums81HkgSvHphBxAVR2-hRxtQ6D8JGDTADy1Mr3PGcrFAcl89BKjGPcIpxIAM2GO9wIOxNJKT_DtZgQLmloQkM2A" /></form>
+</div>
+
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:41:47.599 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2Ffavicon.ico - - - 200 - text/html;+charset=utf-8 28.4087ms
+2023-07-21 20:41:53.642 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5166/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel application/x-www-form-urlencoded 222
+2023-07-21 20:41:53.647 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: application/x-www-form-urlencoded
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+Content-Length: 222
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:41:53.651 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:53.677 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ContactsManager.Core.DTO.LoginDTO, System.String) on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:41:53.713 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:54.830 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-21 20:41:55.452 +01:00 [INF] Executed DbCommand (61ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-21 20:41:55.608 +01:00 [WRN] Invalid password for user.
+2023-07-21 20:41:55.611 +01:00 [WRN] User failed to provide the correct password.
+2023-07-21 20:41:55.616 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:55.620 +01:00 [INF] Executing ViewResult, running view Login.
+2023-07-21 20:41:55.623 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:41:55.628 +01:00 [INF] Executed ViewResult - view Login executed in 8.6784ms.
+2023-07-21 20:41:55.630 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 1949.875ms
+2023-07-21 20:41:55.631 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:55.632 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Register">Register</a>
+                        <a class="nav-active" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Not registered yet? <a method="get" class="link-hover" href="/Account/Register">Register</a>
+    <h2 class="text-large">Login</h2>
+
+    <form method="post" action="/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel">   
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper format" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="conor@gmail.com" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Login</button>
+
+                <div class="text-red validation-summary-errors" data-valmsg-summary="true">
+                <ul><li>Invalid credencials</li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PmoaKGLwt6YDvq7hvCuJxd89pk446j6ey50_EXkG6AQlkkDHsWehf9mIDep2k6wkLVUB4mVaIKzVPs7cKKOw6kmTUNhEyeG3Z_odd8hjX6TBSNgH_1wMnYI-4oAaybw-R8" /></form>
+</div>
+
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:41:55.652 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-21 20:41:55.652 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5166/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel application/x-www-form-urlencoded 222 - 200 - text/html;+charset=utf-8 2009.8563ms
+2023-07-21 20:41:55.664 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-21 20:41:55.666 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 1.4514ms
+2023-07-21 20:41:55.693 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.1612ms
+2023-07-21 20:41:55.714 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/favicon.ico - -
+2023-07-21 20:41:55.716 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-21 20:41:55.728 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-07-21 20:41:55.736 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/favicon.ico - - - 302 0 - 21.4928ms
+2023-07-21 20:41:55.748 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2Ffavicon.ico - -
+2023-07-21 20:41:55.750 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:41:55.753 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:55.757 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:41:55.760 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:55.762 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:41:55.765 +01:00 [INF] Executing ViewResult, running view Login.
+2023-07-21 20:41:55.769 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:41:55.772 +01:00 [INF] Executed ViewResult - view Login executed in 7.5756ms.
+2023-07-21 20:41:55.775 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 15.1565ms
+2023-07-21 20:41:55.777 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:41:55.778 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Register">Register</a>
+                        <a class="nav-active" href="/Account/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+
+<div class="form-container w-25">
+    Not registered yet? <a method="get" class="link-hover" href="/Account/Register">Register</a>
+    <h2 class="text-large">Login</h2>
+
+    <form method="post" action="/Account/Login?ReturnUrl=%2Ffavicon.ico">   
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Email">Email</label>
+                <div class="flex-1">
+                    <input class="form-input" type="email" data-val="true" data-val-email="Email should be in a proper format" data-val-required="Email can&#x27;t be blank" id="Email" name="Email" value="" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt" for="Password">Password</label>
+                <div class="flex-1">
+                    <input class="form-input" type="password" data-val="true" data-val-required="Password can&#x27;t be blank" id="Password" name="Password" />
+                    <span class="text-red field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button class="button button-green-back" type="submit">Login</button>
+
+                <div class="text-red validation-summary-valid" data-valmsg-summary="true">
+                <ul><li style="display:none"></li>
+</ul></div>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PlmRRn8J5Co0YEgmXHX_7zB3WPjkLzdVo2xHiO2EU6rxAGebeg8BE1luUAB50pwlL_Ylxj28Xa-1fgYhVuNgjXyOlNPXECgOVElKx7_rgwTFYWIK5Ck_Vw7iY6IE8kWq5k" /></form>
+</div>
+
+
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022/jquery.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"></script>
+<script>(window.jQuery.validator||document.write("\u003Cscript src=\u0022/jquery.validate.min.js\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+<script>(window.jQuery.validate.unobtrusive||document.write("\u003Cscript src=\u0022/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C/script\u003E"));</script>
+
+</body>
+</html>
+
+2023-07-21 20:41:55.786 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Account/Login?ReturnUrl=%2Ffavicon.ico - - - 200 - text/html;+charset=utf-8 37.8926ms
+2023-07-21 20:42:02.156 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5166/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel application/x-www-form-urlencoded 222
+2023-07-21 20:42:02.161 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: http
+PathBase: 
+Path: /Account/Login
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Content-Type: application/x-www-form-urlencoded
+Cookie: [Redacted]
+Origin: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+Content-Length: 222
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:42:02.165 +01:00 [INF] Executing endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:42:02.166 +01:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ContactsManager.Core.DTO.LoginDTO, System.String) on controller ContactsManager.UI.Controllers.AccountController (ContactsManager.UI).
+2023-07-21 20:42:02.169 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:42:02.212 +01:00 [INF] Entity Framework Core 6.0.9 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+2023-07-21 20:42:02.223 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PersonName], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-21 20:42:02.323 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-21 20:42:02.376 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-21 20:42:02.392 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-07-21 20:42:02.396 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:42:02.398 +01:00 [INF] Executing LocalRedirectResult, redirecting to /Countries/UploadFromExcel.
+2023-07-21 20:42:02.399 +01:00 [INF] Executed action ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI) in 230.9515ms
+2023-07-21 20:42:02.401 +01:00 [INF] Executed endpoint 'ContactsManager.UI.Controllers.AccountController.Login (ContactsManager.UI)'
+2023-07-21 20:42:02.402 +01:00 [INF] Response:
+StatusCode: 302
+Cache-Control: [Redacted]
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: /Countries/UploadFromExcel
+Pragma: [Redacted]
+Set-Cookie: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:42:02.404 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5166/Account/Login?ReturnUrl=%2FCountries%2FUploadFromExcel application/x-www-form-urlencoded 222 - 302 0 - 248.2522ms
+2023-07-21 20:42:02.408 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/Countries/UploadFromExcel - -
+2023-07-21 20:42:02.413 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /Countries/UploadFromExcel
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cache-Control: max-age=0
+Cookie: [Redacted]
+Referer: [Redacted]
+Upgrade-Insecure-Requests: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-User: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+2023-07-21 20:42:02.415 +01:00 [INF] Executing endpoint 'CrudExample.Controllers.CountriesController.UploadFromExcel (ContactsManager.UI)'
+2023-07-21 20:42:02.417 +01:00 [INF] Route matched with {action = "UploadFromExcel", controller = "Countries"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadFromExcel() on controller CrudExample.Controllers.CountriesController (ContactsManager.UI).
+2023-07-21 20:42:02.423 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:42:02.425 +01:00 [INF] ResponseHeaderActionFilter.OnActionExecutionAsync method
+2023-07-21 20:42:02.427 +01:00 [INF] Executing ViewResult, running view UploadFromExcel.
+2023-07-21 20:42:02.443 +01:00 [INF] Response:
+StatusCode: 200
+Content-Type: text/html; charset=utf-8
+Cache-Control: [Redacted]
+Pragma: [Redacted]
+X-Custom-Key: [Redacted]
+2023-07-21 20:42:02.448 +01:00 [INF] Executed ViewResult - view UploadFromExcel executed in 21.3205ms.
+2023-07-21 20:42:02.449 +01:00 [INF] Executed action CrudExample.Controllers.CountriesController.UploadFromExcel (ContactsManager.UI) in 26.711ms
+2023-07-21 20:42:02.451 +01:00 [INF] Executed endpoint 'CrudExample.Controllers.CountriesController.UploadFromExcel (ContactsManager.UI)'
+2023-07-21 20:42:02.452 +01:00 [INF] ResponseBody: 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload Countries from Excel</title>
+    <link rel="stylesheet" href="/StyleSheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="/logo.png?v=_Bl4SCjQHZKOU5aHweT4Ncy1s-zvv6SXNo8gUKmU8oY" width="50px" />
+            </div>
+            <ul>
+                <li>
+                    conor@gmail.com
+                </li>
+                <li>
+                    <a class="" href="/Persons/Index">Persons</a>
+                    <a class="nav-active" href="/Countries/UploadFromExcel">Upload Excel File</a>
+
+                        <a class="" href="/Account/Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content">
+        
+<h2>Upload Countries from Excel</h2>
+
+<div class="w-50">
+    <form method="post" enctype="multipart/form-data" action="/Countries/UploadFromExcel">
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label pt">Choose an Excel file:</label>
+            </div>
+            <div class="flex-1">
+                <input type="file" name="excelFile" class="form-input"/>
+                <div class="text-red"></div>
+                <div class="text-green"></div>
+            </div>
+        </div>
+
+        <div class="form-field flex">
+            <div class="w-25"></div>
+            <div class="flex-1">
+                <button type="submit" class="button button-green-back">Upload</button>
+            </div>
+        </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MjJYTxWiPNLuILPUDhb0PkqdENL-ki7ABLfpaPO1vlIxpa1NBkaiyVsTa8Fawvvne2ev6M3CqxUVn394osnW83uB2Rof2NhBXCAuwlhkonxcUjq-e8dexP2vS-69EyREZDFoy9aClr2qGckECgRHZ85nlrOGpYLCWJXdv-SXYC5VjXu25a2xXnEsaE-5Y26wg" /></form>
+</div>
+
+    </div>
+
+    
+</body>
+</html>
+
+2023-07-21 20:42:02.459 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/Countries/UploadFromExcel - - - 200 - text/html;+charset=utf-8 50.8222ms
+2023-07-21 20:42:02.472 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_vs/browserLink - -
+2023-07-21 20:42:02.475 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - -
+2023-07-21 20:42:02.478 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 2.9060ms
+2023-07-21 20:42:02.486 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.7412ms
+2023-07-21 20:42:02.531 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5166/favicon.ico - -
+2023-07-21 20:42:02.534 +01:00 [INF] Request:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: http
+PathBase: 
+Path: /favicon.ico
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Connection: keep-alive
+Host: localhost:5166
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: [Redacted]
+Referer: [Redacted]
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+Sec-Fetch-Site: [Redacted]
+Sec-Fetch-Mode: [Redacted]
+Sec-Fetch-Dest: [Redacted]
+2023-07-21 20:42:02.537 +01:00 [INF] Response:
+StatusCode: 404
+2023-07-21 20:42:02.542 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5166/favicon.ico - - - 404 0 - 11.1823ms
