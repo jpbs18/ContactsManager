@@ -36,6 +36,8 @@ else
 Rotativa.AspNetCore.RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
 
 app.UseStaticFiles();
+app.UseHsts();
+app.UseHttpsRedirection();
 app.UseRouting(); // Identifying action method based on route
 app.UseAuthentication(); // Reading Identity cookie
 app.UseAuthorization(); // Validates access permissions of the user

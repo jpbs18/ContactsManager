@@ -6,25 +6,30 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ContactsManager.UI.Controllers
 {
-    [AllowAnonymous]
+    //[AllowAnonymous]
     [Route("[controller]/[action]")]
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly RoleManager<ApplicationRole> _roleManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<ApplicationRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
 
         [HttpGet]
+        [Authorize("NotAuthenticated")]
         public IActionResult Register() => View();
         
 
         [HttpPost]
+        [Authorize("NotAuthenticated")]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterDTO registerDTO)
         {
             if (!ModelState.IsValid)
@@ -45,7 +50,15 @@ namespace ContactsManager.UI.Controllers
 
             if (result.Succeeded)
             {
+                if (await _roleManager.FindByNameAsync(registerDTO.UserType.ToString()) is null)
+                {
+                    ApplicationRole applicationRole = new ApplicationRole() { Name = registerDTO.UserType.ToString() };
+                    await _roleManager.CreateAsync(applicationRole);
+                }
+
+                await _userManager.AddToRoleAsync(user, registerDTO.UserType.ToString());
                 await _signInManager.SignInAsync(user, isPersistent: false);
+
                 return RedirectToAction("Index", "Persons");
             }
 
@@ -58,10 +71,12 @@ namespace ContactsManager.UI.Controllers
         }
 
         [HttpGet]
+        [Authorize("NotAuthenticated")]
         public IActionResult Login() => View();
 
 
         [HttpPost]
+        [Authorize("NotAuthenticated")]
         public async Task<IActionResult> Login(LoginDTO loginDTO, string? ReturnUrl)
         {
             if (!ModelState.IsValid)
@@ -74,6 +89,16 @@ namespace ContactsManager.UI.Controllers
 
             if (result.Succeeded)
             {
+                ApplicationUser user = await _userManager.FindByEmailAsync(loginDTO.Email);
+
+                if(user is not null)
+                {
+                    if (await _userManager.IsInRoleAsync(user, UserTypeOptions.Admin.ToString()))
+                    {
+                        return RedirectToAction("Index", "Admin", new { area = "Admin" });
+                    }
+                }
+
                 if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
                 {
                     return LocalRedirect(ReturnUrl);
@@ -87,7 +112,8 @@ namespace ContactsManager.UI.Controllers
             return View(loginDTO);
         }
 
-        
+
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
@@ -96,6 +122,7 @@ namespace ContactsManager.UI.Controllers
         }
 
 
+        [AllowAnonymous]
         public async Task<IActionResult> IsEmailAlreadyRegistered(string email)
         {
             ApplicationUser user = await _userManager.FindByEmailAsync(email);

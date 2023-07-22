@@ -26,6 +26,11 @@
                     @if(User.Identity.IsAuthenticated)
                     {
                         <a asp-controller="Account" asp-action="Logout" class=@Highlight("~/Account/Logout")>Logout</a>
+
+                        @if(User.IsInRole(UserTypeOptions.Admin.ToString()))
+                        {
+                            <a asp-controller="Admin" asp-action="Index" asp-area="Admin" class=@Highlight("~/Admin/Index")>Admin</a>
+                        }
                     }
                     else
                     {

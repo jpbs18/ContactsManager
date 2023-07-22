@@ -44,7 +44,15 @@ namespace CrudExample.StartupExtensions
             .AddUserStore<UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, Guid>>()
             .AddRoleStore<RoleStore<ApplicationRole, ApplicationDbContext, Guid>>();
 
-            services.AddAuthorization(options => options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build()); // enforces authorization policy for all action methods
+            services.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build(); // enforces authorization policy (be authenticated) for all action methods
+                options.AddPolicy("NotAuthenticated", policy =>
+                {
+                    policy.RequireAssertion(context => !context.User.Identity.IsAuthenticated); //When this policy is invoked, if it's true it gives access to a specific action method
+                });
+            });
+
             services.ConfigureApplicationCookie(options => options.LoginPath = "/Account/Login");
            
             return services;
